@@ -1,0 +1,101 @@
+Frame, in :
+config = {
+    # data prarameters
+    # the number of frames to concat with, n must be odd (total 2k+1 = n frames)
+    'concat_nframes': 29,
+    'train_ratio': 0.8,
+
+    # training parameters
+    'seed': 0,                  # random seed
+    'batch_size': 512,                # batch size
+    'num_epoch': 5,                   # the number of training epoch
+    'learning_rate': 1e-4,         # learning rate
+    'model_path': './model.ckpt',     # the path where the checkpoint will be saved
+
+    # model parameters
+    # the input dim of the model, you should not change the value
+    'input_dim': 39 * 25,
+    'hidden_layers': 3,              # the number of hidden layers
+    'hidden_dim': 1580,              # the hidden dim
+    'drop_out': 0.1
+}
+Frame: 1 , acc : 0.47179560052293523
+Frame: 3 , acc : 0.5749559483885637
+Frame: 5 , acc : 0.6249606851209761
+Frame: 7 , acc : 0.6582769662176244
+Frame: 9 , acc : 0.6783986055059777
+Frame: 11 , acc : 0.6900964398719187
+Frame: 13 , acc : 0.6992629644366131
+Frame: 15 , acc : 0.7073191989238143
+Frame: 17 , acc : 0.7104227060004926
+Frame: 19 , acc : 0.711714886602626
+Frame: 21 , acc : 0.714350404516948
+Frame: 23 , acc : 0.7158396331874419
+Frame: 25 , acc : 0.7152522783682904
+Frame: 27 , acc : 0.7162337293241631
+Frame: 29 , acc : 0.7168608726955796  // sweet spot
+Frame: 31 , acc : 0.7160044714753974
+Frame: 33 , acc : 0.716229939938233
+Frame: 35 , acc : 0.7151916481934103
+Frame: 37 , acc : 0.7142007237727126
+Frame: 39 , acc : 0.7151253339396351
+Frame: 41 , acc : 0.710549650429148
+Frame: 43 , acc : 0.711680782129256
+Frame: 45 , acc : 0.708300649879687
+Frame: 47 , acc : 0.7084048579927623
+Frame: 49 , acc : 0.7106254381477481
+Frame: 51 , acc : 0.7060705962598761
+Frame: 53 , acc : 0.7055817654749048
+
+hyper-parameters
+Dropout: 0.1 , acc : 0.7168608726955796
+Dropout: 0.2 , acc : 0.7169537126508649
+Dropout: 0.3 , acc : 0.7176585384338467
+Dropout: 0.4 , acc : 0.7164819341025787
+Dropout: 0.5 , acc : 0.7164554084010686
+Dropout: 0.6 , acc : 0.7132401144394551
+Dropout: 0.7 , acc : 0.7078838174273859
+Dropout: 0.8 , acc : 0.6971390136228425
+Dropout: 0.9 , acc : 0.6689725080050778
+
+
+relu: 0.663
+leackyReLu: same..
+
+BatchSize: 128 , acc : 0.5874059758616116
+BatchSize: 256 , acc : 0.6751094185187291
+BatchSize: 512 , acc : 0.658868110422706
+BatchSize: 1024 , acc : 0.65660584702249
+BatchSize: 2048 , acc : 0.652456469429129
+
+
+Hidden layers: 1 , acc : 0.7115784687091457
+Hidden layers: 2 , acc : 0.7156747948994865
+Hidden layers: 3 , acc : 0.7225051630383297
+Hidden layers: 4 , acc : 0.7244472233274598
+Hidden layers: 5 , acc : 0.7289224881108016
+Hidden layers: 6 , acc : 0.7298527823566191
+Hidden layers: 7 , acc : 0.7305045567365809
+Hidden layers: 8 , acc : 0.7289092252600466
+Hidden layers: 9 , acc : 0.7263684419939749
+
+Hidden Dim: 900 , acc : 0.718473256408799
+Hidden Dim: 1000 , acc : 0.7225278993539097
+Hidden Dim: 1100 , acc : 0.7246101669224502
+Hidden Dim: 1200 , acc : 0.7242482805661342
+Hidden Dim: 1300 , acc : 0.7253585706436272
+Hidden Dim: 1400 , acc : 0.7273726292654276
+Hidden Dim: 1500 , acc : 0.7278463025066788
+Hidden Dim: 1600 , acc : 0.727539362246348
+Hidden Dim: 1700 , acc : 0.7301199340646848
+Hidden Dim: 1800 , acc : 0.7298868868299891
+Hidden Dim: 1900 , acc : 0.7317512647075541
+Hidden Dim: 2000 , acc : 0.7299588851626594
+Hidden Dim: 2100 , acc : 0.7308797059436518
+Hidden Dim: 2200 , acc : 0.7303889804657155
+Hidden Dim: 2300 , acc : 0.7329165008810322
+Hidden Dim: 2300 , acc : 0.7329165008810322
+Hidden Dim: 3100 , acc : 0.7313609579567631
+
+or maybe, I think low hidden layers and low hidden dim 
+but with high epoch might works, since it have less parameters.
